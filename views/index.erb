@@ -1,0 +1,20 @@
+require 'sinatra'
+
+get '/' do
+end
+
+get '/secret' do
+  'this is a secret page'
+end
+
+get '/graham' do
+  "<div style='border: 2px dotted green'>
+  <img src='http://grumpyoldguy.weebly.com/uploads/8/8/8/9/8889249/6642462.jpg?153'>
+  </div>"
+end
+
+get '/michael' do
+  "<div style='border:2px dotted red'>
+  <img src='http://alcaldehotel.com/wp-content/uploads/images_of_elvis_presley.jpg'>
+  </div>"
+end
