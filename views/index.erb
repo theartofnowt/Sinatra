@@ -1,5 +1,65 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>Stupid cat thingmy</title>
+      <style type="text/css">
+      body {
+        background-color: silver;
+        color: white;
+        padding: 20px;
+        font-family: Arial, Verdana, sans-serif;}
+        h1 {
+          background-color: pink;
+          font-family: Arial, Verdana, sans-serif;
+          padding: inherit;
+        }
+        img.align-center {
+          display: block;
+          margin: 0px auto;
+        }
+        img.large {
+          width: 900px;
+          height: 600px;
+        }
+        .form {
+          background-color: pink;
+          padding: inherit;
+        }
+        legend {
+          font-style: italic;
+          font-size: 12;
+          color: white;
+        }
+      </style>
+    </head>
 
-  <h1>My name is <%= @name %></h1>
-  <div style='border: 2px dotted green'>
-  <img src='http://f.cl.ly/items/0k0v3e2X3l2f3i1n1Y19/Screen%20Shot%202013-09-10%20at%2011.32.00.png'>
+
+
+  <!-- <h1>My name is <%= @name %></h1>
+  <div>
+  <img src="http://f.cl.ly/items/0k0v3e2X3l2f3i1n1Y19/Screen%20Shot%202013-09-10%20at%2011.32.00.png"width="400" height="300" border="5" style="border: dotted red">
+  </div> -->
+
+  <%if @name%>
+    <h1>My name is <%= @name %></h1>
+  <%end%>
+
+  <!-- <form action="/named-cat" method="post">
+    <p>stupid cat form:
+      <input type="text" name="name" size="15" maxlength="30">
+      <input type="submit" value="Submit">
+    </p>
+  </form> -->
+<body>
+  <div>
+    <p><img src="http://f.cl.ly/items/0k0v3e2X3l2f3i1n1Y19/Screen%20Shot%202013-09-10%20at%2011.32.00.png"
+    class="align-center large"/></p>
   </div>
+  <div class="form">
+  <form action="/named-cat">
+    <legend>Pointless comments</legend>
+      <textarea name="comments" cols="20" rows="4">Enter
+      your comments....</textarea>
+  </form>
+</div>
+</body>
